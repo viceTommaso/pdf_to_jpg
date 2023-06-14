@@ -25,6 +25,8 @@ Il programma converte i file .pdf in immagini .jpg
 
 Tutti i file presenti nella cartella `pdf` verranno processati e convertiti in immagini che saranno poi presenti nella cartella `jpg`
 
+***SI CONSIGLIA DI ESEGUIRE IL PROGRAMMA A VUOTO PRIMA DELL'USO***
+
 ### Funzioni attivabili/disattivabili:
 
 - Creazione di una cartella contenente le immagini convertite se il pdf presenta più pagine, è disattivabile cambiando nella variabile globale `mkdir` da True a False

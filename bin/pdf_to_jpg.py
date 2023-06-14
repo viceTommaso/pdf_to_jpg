@@ -12,11 +12,32 @@ del_pdf = False
 mkdir = True
 
 
+def init_directory(dir_ck, dir_vsby, dir_name):
+    """
+    check if there are any dirs needed to boot
+    :param dir_ck: directory to check if exist
+    :param dir_vsby: if directory is visible or not (any str/h)
+    :param dir_name: the name to print when crated
+    :return: 0
+    """
+    if str(os.path.exists(dir_ck)) == "False":
+        os.mkdir(dir_ck)
+        msg = f"""{dir_name} DIRECTORY doesn't exist, just created"""
+        if dir_vsby == "h":
+            os.system(f"""attrib +h {dir_ck}""")
+            msg = msg + " and hidden"
+        print(msg)
+    return 0
+
+
 def main():
     """
     main
     :return: 0
     """
+    init_directory(source,"", "PDF")
+    init_directory(destination,"", "JPG")
+    
     for root, dirs, files in os.walk(source):
         for i in files:
             v_file = i.split(".")
