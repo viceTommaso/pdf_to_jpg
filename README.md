@@ -41,5 +41,3 @@ Mentre per la libreria poppler: riscaricare la release e sostituirla a quella pr
 
 ## Author
 Vicentini Tommaso
-"# pdf_to_jpg" 
-"# pdf_to_jpg" 
